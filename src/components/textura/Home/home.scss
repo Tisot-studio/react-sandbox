@@ -1,0 +1,332 @@
+$brown: #F8CB97;
+$pink: #FFF2EE;
+$blue: #7087C3;
+$purple: #7B7297;
+
+
+.hp-hero-section-container {
+    background: $brown;
+    height: 870px;
+    display: flex;
+    visibility: hidden;
+
+    .hp-header-container {
+        width: 100%;
+        height: 100vh;
+        padding-top: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        p {
+            font-size: 84px;
+            color: white;
+            font-family: 'Libre Caslon Display', serif;
+            letter-spacing: 1px;
+        }
+        .taste {
+            width: 100%;
+            padding-left: 60px;
+            margin-top: 30px;
+        }
+
+        .art {
+            width: 100%;
+            padding-left: 240px;
+        }
+
+        .rwe {
+            width: 100%;
+            text-align: right;
+            font-size: 50px;
+            padding-right: 60px;
+        }
+    }
+    .hp-empty-container {
+        width: 43vw;
+        position: relative;
+    }
+
+}
+
+.hp-brand-description {
+    height: 490px;
+    background: #FFF2EE;
+
+    .hp-brand-description-message-container {
+        margin: 0 60px;
+        height: 100%;
+        border-bottom: #7087C3 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 58px;
+        font-family: 'Libre Caslon Display', serif;
+        color: #7087C3;
+    }
+}
+
+// Что бы был доступ GSAP к правилу нужно, что бы оно не было вложено в другие правило а было на верхнем уровне!
+.hp-img-wraper {
+    width: 57vw;
+    position: relative;
+    overflow: hidden;
+
+    // Reveal mask
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: $brown;
+
+    }
+    img {
+        width: 57vw;
+        position: absolute;
+    }
+}
+
+
+
+// special offer section
+.hp-special-offer {
+    height: 700px;
+    background: #FFF2EE;
+    display: flex;
+
+
+    .hp-special-offer-wraper {
+        display: flex;
+        margin: 0 60px;
+        padding: 20px 0;
+        position: relative;
+
+
+        .hp-special-offer-img-container {
+            padding-left: 50px;
+
+            img {
+                width: 530px;
+            }
+        }
+
+        .hp-special-offer-description-container {
+            padding: 20px 50px 0 150px;
+            color: #7087C3;
+
+            .sp-of-header {
+                font-size: 48px;
+                font-family: 'Libre Caslon Display', serif;
+            }
+
+            .sp-of-body {
+                padding-top: 20px;
+                font-size: 28px;
+                font-family: 'Spartan', sans-serif;
+                line-height: 34px;
+            }
+
+            .sp-of-link {
+                padding-top: 50px;
+                font-size: 28px;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .hp-special-offer-product-img-container {
+        position: absolute;
+        width: 100%;
+        padding-top: 200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+}
+
+
+// about
+.hp-about {
+    padding-top: 50px;
+    height: 750px;
+    background: #FFF2EE;
+    display: flex;
+
+
+    .hp-about-wraper {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 60px;
+        padding: 20px 0;
+        position: relative;
+
+
+        .hp-about-img-container {
+            padding-left: 50px;
+            img {
+                width: 530px;
+
+            }
+        }
+
+        .hp-about-description-container {
+            padding: 20px 20px 0 60px;
+            color: #7087C3;
+
+            .ab-header {
+                font-size: 48px;
+                font-family: 'Libre Caslon Display', serif;
+            }
+
+            .ab-body {
+                padding-top: 20px;
+                font-size: 28px;
+                font-family: 'Spartan', sans-serif;
+                line-height: 34px;
+            }
+
+            .ab-link {
+                padding-top: 50px;
+                font-size: 28px;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .hp-about-product-img-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 350px;
+        }
+    }
+
+}
+
+
+// product carousel
+.hp-product-carousel {
+    height: 630px;
+    color: white;
+    background: $brown;
+    padding-top: 50px;
+
+    p {
+        font-size: 48px;
+        font-family: 'Libre Caslon Display', serif;
+        text-align: center;
+    }
+
+    .hp-product-carousel-wraper {
+        overflow: scroll;
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+
+        img {
+            width: 350px;
+            margin: 0 20px;
+        }
+    }
+
+    .hp-product-carousel-wraper::-webkit-scrollbar{
+        width: 0px;
+        height: 4px;
+    }
+    
+    // Сама полоска скрола
+    .hp-product-carousel-wraper::-webkit-scrollbar-track{
+        background-color: white;
+        margin-block: .5em;
+    }
+    
+    // Бегунок отображающий позицию на странице
+    .hp-product-carousel-wraper::-webkit-scrollbar-thumb{
+        background-color: rgb(46, 46, 46);
+        border-radius: 50px;
+    }
+}
+
+
+// shop banner section
+.hp-shop-baner {
+
+    background-image: url('./img/8.jpg');
+    height: 100vh;
+
+;
+
+    .hp-shop-baner-link {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: relative;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+
+        .hp-shop-baner-link-header-wraper {
+            position: relative;
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            p {
+                font-size: 98px;
+                font-family: 'Libre Caslon Display', serif;
+                text-align: center;
+                color: white;
+                letter-spacing: 1px;
+            }
+
+        }
+
+        .hp-shop-baner-png-container {
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .circle {
+                width: 120px;
+                margin: 0 100px 50px 0;
+                position: relative;
+            }
+            .arrow {
+                width: 120px;
+                margin: 0px 250px 100px 0;
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+            }
+
+        }
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+
+        .arrow {
+            margin: 0px 150px 100px 0;
+        }
+    }
+    }
+}

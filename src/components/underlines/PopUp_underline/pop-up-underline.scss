@@ -1,0 +1,17 @@
+@import '../underline-styles'; 
+
+.pop-up-underline{
+    font-size: 30px;
+    padding: 5px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include hover-underline('fade', 'bottom');
+
+  }
+
+    

@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import FillLoader from './components/FillLoader/FillLoader';
+import { gsap, Power2 } from 'gsap';
+import {useEffect} from 'react';
+
+
 
 function App() {
+
+
+useEffect(()=>{
+
+  gsap.to('.quote', {
+    duration: 1,
+    y: -30,
+    opacity: 1,
+    delay: 7.6,
+    ease: Power2
+  })
+
+})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+
+          <div className='components-container'>
+            <FillLoader/>
+            <div className='quote' 
+            style={{position: 'relative', 
+            fontSize: '140px', 
+            fontFamily: 'Spartan', 
+            opacity: 0,
+            }} 
+            onClick={()=> alert('hi')}>
+              content
+            </div>
+          </div>
+      </div>
+ 
+
+    
   );
 }
 
